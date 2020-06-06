@@ -30,19 +30,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "android"
-version = "0.1.0"
-dependencies = [
- "cgmath",
- "futures",
- "image",
- "ndk-glue",
- "shaderc",
- "wgpu",
- "winit",
-]
-
-[[package]]
 name = "android_log-sys"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1875,6 +1862,19 @@ dependencies = [
  "spirv_headers",
  "vec_map",
  "wgpu-types",
+]
+
+[[package]]
+name = "wgpu-on-android"
+version = "0.1.0"
+dependencies = [
+ "cgmath",
+ "futures",
+ "image",
+ "ndk-glue",
+ "shaderc",
+ "wgpu",
+ "winit",
 ]
 
 [[package]]

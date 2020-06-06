@@ -1,5 +1,5 @@
 [package]
-name = "android"
+name = "wgpu-on-android"
 version = "0.1.0"
 authors = ["Ben Hansen <bhbenjaminhansen@gmail.com>"]
 edition = "2018"

@@ -1,3 +1,3 @@
 fn main() {
-    android::main();
+    wgpu_on_android::main();
 }

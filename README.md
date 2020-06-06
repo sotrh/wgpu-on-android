@@ -1,10 +1,6 @@
 # Running this project
 
-<div style="border: red solid 1px;">
-
-This example is currently broken, but I'm uploading it as I try to find a fix for it.
-
-</div>
+* This example is currently broken, but I'm uploading it as I try to find a fix for it.
 
 1. Install [cargo-apk](https://crates.io/crates/cargo-apk) if you haven't already.
 
