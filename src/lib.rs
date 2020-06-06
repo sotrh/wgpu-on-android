@@ -18,11 +18,15 @@ struct State {
 
 impl State {
     async fn new(window: &Window) -> Self {
+        println!("{}:{} Getting window size", file!(), line!());
         let size = window.inner_size();
 
+        println!("{}:{} Creating instance", file!(), line!());
         let instance = wgpu::Instance::new();
+        println!("{}:{} Creating surface", file!(), line!());
         let surface = unsafe { instance.create_surface(window) };
 
+        println!("{}:{} Requesting adapter", file!(), line!());
         let adapter = instance.request_adapter(
             &wgpu::RequestAdapterOptions {
                 power_preference: wgpu::PowerPreference::Default,
@@ -162,17 +166,21 @@ impl State {
 ndk_glue::ndk_glue!(main);
 
 pub fn main() {
+    println!("{}:{} Creating event_loop", file!(), line!());
     let event_loop = EventLoop::new();
+    println!("{}:{} Creating window", file!(), line!());
     let window = WindowBuilder::new()
         .build(&event_loop)
         .unwrap();
 
     use futures::executor::block_on;
 
-    // Since main can't be async, we're going to need to block
+    println!("{}:{} Creating state", file!(), line!());
     let mut state = block_on(State::new(&window));
 
+    println!("{}:{} Starting event loop", file!(), line!());
     event_loop.run(move |event, _, control_flow| {
+        println!("{}:{} event = {:?}", file!(), line!(), event);
         match event {
             Event::WindowEvent {
                 ref event,
